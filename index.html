@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline:wght@100..900&family=Montserrat:wght@100..900&family=Source+Code+Pro:wght@200..900&family=Underdog&display=swap"
-      rel="stylesheet"
-    />
+    
+    <!-- Updated Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <title>Barakat Lawal | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
@@ -20,42 +17,70 @@
 
   <body>
     <div class="container">
+      <button id="toggle-theme">Toggle Theme</button>
+
+      <!-- Hero Section -->
       <main>
         <section class="intro">
-          <h1>Hello, I'm <span class="highlight">Barakat Lawal</span></h1>
-          <p>Aspiring software developer with a passion for clean code and elegant design.</p>
-          <div class="button-group">
-            <a class="button" href="Barakat_Lawal Resume.pdf" download>Download My CV</a>
-            <a class="button" href="https://github.com/Oluwarantimi-L" target="_blank">My GitHub</a>
+          <div class="hero-content">
+            <img src="Images/IMG-20250801-WA0001.jpg" class="hero-img" alt="Barakat's Hero Image" />
+            <div class="text">
+              <h1>👋 Hi, I'm <span class="highlight">Barakat Lawal</span></h1>
+              <p>
+                A passionate software developer dedicated to building elegant, functional, and responsive web experiences.
+              </p>
+              <div class="button-group">
+                <a class="button" href="Barakat_Lawal Resume.pdf" download>Download My CV</a>
+                <a class="button" href="https://github.com/Oluwarantimi-L" target="_blank">My GitHub</a>
+              </div>
+            </div>
           </div>
         </section>
 
+        <!-- Gallery -->
         <section class="gallery">
           <h2>Gallery</h2>
           <div class="image-grid">
-            <img src="Images/IMG-20250801-WA0001.jpg" alt="Picture 1 of Barakat" />
-            <img src="Images/IMG-20250801-WA0002.jpg" alt="Picture 2 of Barakat" />
-            <img src="Images/IMG-20250801-WA0003.jpg" alt="Picture 3 of Barakat" />
-            <img src="Images/IMG-20250801-WA0004.jpg" alt="Picture 4 of Barakat" />
-            <img src="Images/image 5.jpg" alt="Picture 5 of Barakat" />
+            <img src="Images/IMG-20250801-WA0001.jpg" alt="Picture 1" />
+            <img src="Images/IMG-20250801-WA0002.jpg" alt="Picture 2" />
+            <img src="Images/IMG-20250801-WA0003.jpg" alt="Picture 3" />
+            <img src="Images/IMG-20250801-WA0004.jpg" alt="Picture 4" />
+            <img src="Images/image 5.jpg" alt="Picture 5" />
           </div>
         </section>
 
+        <!-- Projects -->
         <section class="projects">
-          <h2>My Top 5 Projects</h2>
+          <h2>Top 5 Projects</h2>
           <ul>
             <li><a href="https://my-weather-app-dev.netlify.app/" target="_blank">Weather App</a></li>
-            <li><a href="https://product-preview-card9.netlify.app/" target="_blank">Product-preview card</a></li>
-            <li><a href="https://social-link-profilecard.netlify.app/" target="_blank">Social links profile-card</a></li>
-            <li><a href="https://github.com/YOUR_USERNAME/project4" target="_blank">Omelette-page</a></li>
-            <li><a href="https://github.com/YOUR_USERNAME/project5" target="_blank">Hobby-page</a></li>
+            <li><a href="https://product-preview-card9.netlify.app/" target="_blank">Product Preview Card</a></li>
+            <li><a href="https://social-link-profilecard.netlify.app/" target="_blank">Social Links Profile Card</a></li>
+            <li><a href="https://omelleterecipe-page.netlify.app/" target="_blank">Omelette Page</a></li>
+            <li><a href="https://mini-projects-1.netlify.app/" target="_blank">Profile Card</a></li>
           </ul>
         </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+          <h2>Contact Me</h2>
+          <p>Email: <a href="mailto:baraklawolu@gmail.com">baraklawolu@gmail.com</a></p>
+          <p>Phone: <a href="tel:+2340000000000">+234 9030893858</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/barakat-lawal-1b0b2a1b6/" target="_blank">Barakat Lawal</a></p>
       </main>
 
+      <!-- Footer -->
       <footer class="attribution">
         Designed & built by <a href="https://github.com/Oluwarantimi-L" target="_blank">Barakat</a>
       </footer>
     </div>
+
+    <script>
+      const toggleBtn = document.getElementById('toggle-theme');
+      toggleBtn.addEventListener('click', () => {
+        const html = document.documentElement;
+        html.dataset.theme = html.dataset.theme === 'light' ? 'dark' : 'light';
+      });
+    </script>
   </body>
 </html>
